@@ -47,6 +47,10 @@ async def on_message(message):
                 await message.channel.send('You are right!')
             else:
                 await message.channel.send(f'Oops. It is actually {answer}.')
+    elif message.content.startswith('$emoji1'):
+        await message.channel.send('-_-')
+    elif message.content.startswith('$kamu siapa?'):
+        await message.channel.send('Saya bot')
     else:
         await message.channel.send("Tidak dapat memproses perintah ini, maaf")
 
