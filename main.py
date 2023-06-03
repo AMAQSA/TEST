@@ -1,3 +1,4 @@
+
 from settings import settings
 import discord
 # import * - adalah cara cepat untuk mengimpor semua file di perpustakaan
@@ -30,28 +31,15 @@ async def on_message(message):
         await message.channel.send(flip_coin())
     elif message.content.startswith('$pass'):
         await message.channel.send(gen_pass(10))
-    elif message.content.startswith('$guess'):
-            await message.channel.send('Guess a number between 1 and 10.')
-
-            def is_correct(m):
-                return m.author == message.author and m.content.isdigit()
-
-            answer = random.randint(1, 10)
-
-            try:
-                guess = await self.wait_for('message', check=is_correct, timeout=5.0)
-            except asyncio.TimeoutError:
-                return await message.channel.send(f'Sorry, you took too long it was {answer}.')
-
-            if int(guess.content) == answer:
-                await message.channel.send('You are right!')
-            else:
-                await message.channel.send(f'Oops. It is actually {answer}.')
     elif message.content.startswith('$emoji1'):
-        await message.channel.send('-_-')
-    elif message.content.startswith('$kamu siapa?'):
+        await message.channel.send('-_-') 
+    elif message.content.startswith('$kamusiapa?'):
         await message.channel.send('Saya bot')
-    else:
-        await message.channel.send("Tidak dapat memproses perintah ini, maaf")
+    elif message.content.startswith('$help'):
+        await message.channel.send('kamu bisa memerintahkan dalam beberapa macam perintah \nmisalnya : \n 1.$hello \n 2.$smile \n 3.$coin \n 4.$pass \n 5.$emoji1 \n 6.$kamusiapa? \n 7.$help \n 8.$rank')
+    elif message.content.startswith('$rank'):
+        await message.channel.send('grandmaster ml , ff heroic')
+    
+
 
 client.run(settings["TOKEN"])
