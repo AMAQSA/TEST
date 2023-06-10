@@ -19,7 +19,7 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send(f'Hi! I am a bot {bot.user}!')
 
-organik = ["daun","sayur","kulit pisang"]
+organik = ["daun","sayur","kulit", "pisang"]
 anorganik = ["plastik","besi","kabel"]
 
 @bot.command()
