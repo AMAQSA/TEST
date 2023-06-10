@@ -93,7 +93,9 @@ async def pilih(ctx, sampah):
     elif sampah in anorganik:
         await ctx.send("Masukkan dalam sampah anorganik")
 
-
+@bot.command()
+async def tolong(ctx):
+    await ctx.send("pengguna bisa memasukkan beberapa perintah yaitu:\n1.help\n2.hello\n3.heh\n4.tambah contoh (tambah 10 23)\n5.perkalian contoh(perkalian 4 10)\n6.pembagian contoh(pembagian 10 2)\n7.mem\n8.hewan\n9.duck\n10dog\n11.memberi tahu pengguna tempat sampah apa yang cocok dengan barang tersebut contoh(pilih plastik)bot akan menjawab.kata yang bisa di gunakan yaitu daun,sayur,kulit,pisang,plastik,besi,kabel")
 
 
 bot.run("MASUKKAN TOKEN MU DISINI!")
