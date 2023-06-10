@@ -31,7 +31,5 @@ async def pilih(ctx , sampah):
         if sampah in sampah_anorganik:
             await ctx.send("masukkan ke sampah sampah anorganik")
    
-    # await ctx.send("nama sampah")
-    # if msg.content in sampah_organik:
-    #     await ctx.send("sampah oraganik")
-bot.run("MTEwNjgwNTAxMDI5NTE3MzE3MA.Gpygzb.eVjkyiBgc5pmUBfTLR2Y8buACTOnotFuYjO1cM")
+    
+bot.run("TOKEN MU MASUKAN DI SINI!")
