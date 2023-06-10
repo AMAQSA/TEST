@@ -10,9 +10,6 @@ intents.message_content = True
 bot = commands.Bot(command_prefix='$', intents=intents)
 
 # Dan inilah cara Kamu mengganti nama file dari variabel!
-sampah_anorganik =  ["plastik","besi","baja","emas"]
-sampah_organik =  ["nasi padang","ayam","kayu","daun"]
-# sampah = ["organik" , "anorganik"]
 
 @bot.event
 async def on_ready():
@@ -21,15 +18,16 @@ async def on_ready():
 @bot.command()
 async def hello(ctx):
     await ctx.send(f'Hi! I am a bot {bot.user}!')
-        
-@bot.command()
-async def pilih(ctx , sampah):
-        if sampah in sampah_organik:
-            await ctx.send("masukkan ke sampah sampah organik")
-    
 
-        if sampah in sampah_anorganik:
-            await ctx.send("masukkan ke sampah sampah anorganik")
+organik = ["daun","sayur","kulit pisang"]
+anorganik = ["plastik","besi","kabel"]
+
+@bot.command()
+async def pilih(ctx, sampah):
+    if sampah in organik:
+        await ctx.send("Masukkan dalam sampah organik")
+    elif sampah in anorganik:
+        await ctx.send("Masukkan dalam sampah anorganik")
    
     
 bot.run("TOKEN MU MASUKAN DI SINI!")
